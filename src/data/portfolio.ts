@@ -17,8 +17,7 @@ import type {
  * =============================================================================
  */
 export const pendingConfig: PendingConfig = {
-  // TODO: reemplazar por tu usuario real de GitHub
-  githubUsername: 'TU_USUARIO_DE_GITHUB',
+  githubUsername: 'AxelMerlino',
   // TODO: reemplazar por la URL definitiva cuando despliegues en Vercel
   siteUrl: 'https://TU-DOMINIO.vercel.app',
   cvPath: '/cv/axel-maximiliano-merlino-cv.pdf',
