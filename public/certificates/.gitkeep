@@ -1,0 +1,5 @@
+# Colocá aquí los PDF de certificaciones, por ejemplo:
+# red-hat-rh124-axel-merlino.pdf
+# red-hat-rh104-axel-merlino.pdf
+#
+# Luego activá showPdfDownload en cada certificación dentro de src/data/portfolio.ts
