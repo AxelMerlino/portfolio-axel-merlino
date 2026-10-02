@@ -1,4 +1,5 @@
-import { Check, Copy, Mail, MapPin } from 'lucide-react'
+import { Check, Copy, Mail, MapPin, Phone } from 'lucide-react'
+import { Reveal } from '../components/Reveal'
 import { Toast } from '../components/Toast'
 import { SectionTitle } from '../components/SectionTitle'
 import { SocialLinks } from '../components/SocialLinks'
@@ -11,16 +12,19 @@ export function Contact() {
   return (
     <section id="contacto" className="section-shell">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle
-          kicker="07 — Conversemos"
-          title="Contacto"
-          description="Si querés escribirme por una oportunidad o una consulta profesional, el correo es la vía más directa."
-        />
+        <Reveal>
+          <SectionTitle
+            kicker="07 — Conversemos"
+            title="Contacto"
+            description="Si querés escribirme por una oportunidad o una consulta profesional, podés usar el correo o el teléfono."
+          />
+        </Reveal>
 
+        <Reveal delay={70}>
         <div className="glass-card mx-auto max-w-3xl rounded-2xl p-6 sm:p-8">
           <ul className="space-y-4 text-sm sm:text-base">
             <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 size-5 text-sky-600 dark:text-sky-300" aria-hidden="true" />
+              <Mail className="mt-0.5 size-5 shrink-0 text-sky-600 dark:text-sky-300" aria-hidden="true" />
               <div>
                 <p className="text-slate-500 dark:text-slate-400">Correo</p>
                 <a className="font-medium hover:text-sky-600 dark:hover:text-sky-300" href={mailtoUrl}>
@@ -29,7 +33,16 @@ export function Contact() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-5 text-sky-600 dark:text-sky-300" aria-hidden="true" />
+              <Phone className="mt-0.5 size-5 shrink-0 text-sky-600 dark:text-sky-300" aria-hidden="true" />
+              <div className="min-w-0">
+                <p className="text-slate-500 dark:text-slate-400">Teléfono</p>
+                <a className="font-medium break-words hover:text-sky-600 dark:hover:text-sky-300" href={profile.phoneHref}>
+                  {profile.phone}
+                </a>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="mt-0.5 size-5 shrink-0 text-sky-600 dark:text-sky-300" aria-hidden="true" />
               <div>
                 <p className="text-slate-500 dark:text-slate-400">Ubicación</p>
                 <p className="font-medium">{profile.location}</p>
@@ -44,6 +57,13 @@ export function Contact() {
             >
               <Mail className="size-4" aria-hidden="true" />
               Enviar correo
+            </a>
+            <a
+              href={profile.phoneHref}
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-5 py-2.5 text-sm font-medium hover:border-sky-400/60"
+            >
+              <Phone className="size-4" aria-hidden="true" />
+              Llamar
             </a>
             <button
               type="button"
@@ -61,6 +81,7 @@ export function Contact() {
             <SocialLinks links={socialLinks} />
           </div>
         </div>
+        </Reveal>
       </div>
       <Toast message={message} visible={Boolean(message)} />
     </section>

@@ -1,17 +1,21 @@
-import { languages, profile } from '../data/portfolio'
+import { Reveal } from '../components/Reveal'
 import { SectionTitle } from '../components/SectionTitle'
+import { languages, profile } from '../data/portfolio'
 
 export function About() {
   return (
     <section id="sobre-mi" className="section-shell">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle
-          kicker="01 — Perfil"
-          title="Sobre mí"
-          description="Perfil junior con experiencia laboral real, formación universitaria en curso y foco en el ecosistema .NET."
-        />
+        <Reveal>
+          <SectionTitle
+            kicker="01 — Perfil"
+            title="Sobre mí"
+            description="Desarrollador .NET Junior, con pasantía en backend y APIs, y estudiante de 5.º año de Ingeniería en Sistemas."
+          />
+        </Reveal>
 
         <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+          <Reveal className="h-full">
           <div className="glass-card space-y-4 rounded-2xl p-6 sm:p-8">
             {profile.about.map((paragraph) => (
               <p key={paragraph} className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
@@ -19,8 +23,10 @@ export function About() {
               </p>
             ))}
           </div>
+          </Reveal>
 
-          <aside className="glass-card rounded-2xl p-6 sm:p-8" aria-labelledby="idiomas-title">
+          <Reveal className="h-full" delay={80}>
+          <aside className="glass-card h-full rounded-2xl p-6 sm:p-8" aria-labelledby="idiomas-title">
             <h3 id="idiomas-title" className="text-lg font-semibold text-slate-900 dark:text-white">
               Idiomas
             </h3>
@@ -35,6 +41,7 @@ export function About() {
               ))}
             </ul>
           </aside>
+          </Reveal>
         </div>
       </div>
     </section>

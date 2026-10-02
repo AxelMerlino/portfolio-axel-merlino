@@ -1,3 +1,4 @@
+import type { MouseEvent as ReactMouseEvent } from 'react'
 import { ExternalLink } from 'lucide-react'
 import { projectTypeLabels } from '../data/portfolio'
 import type { Project } from '../types'
@@ -7,9 +8,38 @@ interface ProjectCardProps {
   project: Project
 }
 
+function allowTilt() {
+  return window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches
+}
+
 export function ProjectCard({ project }: ProjectCardProps) {
+  const tilt = (event: ReactMouseEvent<HTMLElement>) => {
+    if (!allowTilt()) {
+      return
+    }
+
+    const card = event.currentTarget
+    const rect = card.getBoundingClientRect()
+    const px = (event.clientX - rect.left) / rect.width - 0.5
+    const py = (event.clientY - rect.top) / rect.height - 0.5
+    card.style.setProperty('--tilt-x', `${(-py * 4.5).toFixed(2)}deg`)
+    card.style.setProperty('--tilt-y', `${(px * 5.5).toFixed(2)}deg`)
+    card.classList.add('is-tilting')
+  }
+
+  const resetTilt = (event: ReactMouseEvent<HTMLElement>) => {
+    const card = event.currentTarget
+    card.style.setProperty('--tilt-x', '0deg')
+    card.style.setProperty('--tilt-y', '0deg')
+    card.classList.remove('is-tilting')
+  }
+
   return (
-    <article className="glass-card flex h-full flex-col overflow-hidden rounded-2xl">
+    <article
+      className="project-tilt glass-card flex h-full flex-col overflow-hidden rounded-2xl"
+      onMouseMove={tilt}
+      onMouseLeave={resetTilt}
+    >
       {project.image ? (
         <img
           src={project.image}
@@ -22,7 +52,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           className="flex h-28 items-center justify-center bg-linear-to-br from-sky-500/20 via-blue-600/10 to-violet-500/20"
           aria-hidden="true"
         >
-          <span className="font-mono text-xs tracking-[0.2em] text-sky-700 uppercase dark:text-sky-300">
+          <span className="px-4 text-center font-mono text-xs tracking-[0.2em] text-sky-700 uppercase dark:text-sky-300">
             {projectTypeLabels[project.type]}
           </span>
         </div>
@@ -72,10 +102,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-2 text-sm hover:border-sky-400/60"
-                aria-label={`Demo en vivo de ${project.title} (se abre en una pestaña nueva)`}
+                aria-label={`Ver proyecto ${project.title} (se abre en una pestaña nueva)`}
               >
                 <ExternalLink className="size-4" aria-hidden="true" />
-                Demo
+                Ver proyecto
               </a>
             ) : null}
           </div>

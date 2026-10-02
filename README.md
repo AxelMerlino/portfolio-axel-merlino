@@ -1,6 +1,6 @@
 # Portfolio — Axel Maximiliano Merlino
 
-Portfolio profesional de **Axel Maximiliano Merlino**, desarrollador .NET Jr. y estudiante de Ingeniería en Sistemas. El sitio está pensado para búsquedas laborales de desarrollador .NET Junior, backend Junior, full stack Junior y pasantías IT.
+Portfolio profesional de **Axel Maximiliano Merlino**, desarrollador .NET Junior y estudiante de Ingeniería en Sistemas. El sitio está pensado para búsquedas laborales de desarrollador .NET Junior, backend y pasantías IT.
 
 Es una aplicación de una sola página, con navegación por secciones, tema oscuro como predeterminado y un tema claro coherente.
 
@@ -117,7 +117,7 @@ Colocá las imágenes en `public/projects/` y referencialas con ruta absoluta, p
 1. Guardá el PDF actualizado en:
 
 ```text
-public/cv/axel-maximiliano-merlino-cv.pdf
+public/cv/Axel-Maximiliano-Merlino-CV.pdf
 ```
 
 2. En `src/data/portfolio.ts` cambiá:
@@ -154,11 +154,11 @@ git init
 git add .
 git commit -m "Publicar portfolio profesional de Axel Merlino"
 git branch -M main
-git remote add origin https://github.com/TU_USUARIO_DE_GITHUB/portfolio-axel-merlino.git
+git remote add origin https://github.com/AxelMerlino/portfolio-axel-merlino.git
 git push -u origin main
 ```
 
-Reemplazá `TU_USUARIO_DE_GITHUB` por tu usuario real. Si el repositorio ya existe y está vacío, esos comandos alcanzan. Si GitHub te propone otro nombre de repo, usá esa URL.
+El repositorio remoto es https://github.com/AxelMerlino/portfolio-axel-merlino.
 
 ## Cómo desplegarlo en Vercel
 
@@ -187,10 +187,10 @@ En el proyecto de Vercel:
 
 ## Lista de datos pendientes de reemplazar
 
-- [ ] Usuario de GitHub (`TU_USUARIO_DE_GITHUB`)
-- [ ] URL definitiva del portfolio (`https://TU-DOMINIO.vercel.app`)
+- [x] Usuario de GitHub (`AxelMerlino`)
+- [x] URL definitiva del portfolio (`https://portfolio-axel-merlino.vercel.app`)
 - [ ] Disponibilidad laboral, si querés un texto más preciso
-- [ ] CV en `public/cv/axel-maximiliano-merlino-cv.pdf` y `showCvDownload: true`
+- [x] CV en `public/cv/Axel-Maximiliano-Merlino-CV.pdf` y `showCvDownload: true`
 - [ ] PDF de certificaciones y `showPdfDownload: true` cuando existan
 - [ ] Proyectos personales futuros (repositorio, demo, imagen)
 - [ ] `public/robots.txt` y `public/sitemap.xml` con el dominio final

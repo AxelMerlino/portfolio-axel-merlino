@@ -1,4 +1,5 @@
 import { Background } from './components/Background'
+import { CursorField } from './components/CursorField'
 import { Footer } from './components/Footer'
 import { Navbar } from './components/Navbar'
 import { Seo } from './components/Seo'
@@ -18,6 +19,7 @@ export default function App() {
       <Seo />
       <SkipLink />
       <Background />
+      <CursorField />
       <Navbar />
       <main id="contenido">
         <Hero />

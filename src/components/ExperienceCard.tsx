@@ -25,7 +25,7 @@ export function ExperienceCard({ experience, isLast = false }: ExperienceCardPro
         />
       ) : null}
 
-      <div className="glass-card rounded-2xl p-5 sm:p-6">
+      <div className="glass-card min-w-0 rounded-2xl p-5 sm:p-6">
         <div className="flex flex-wrap items-center gap-2">
           <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{experience.role}</h3>
           {experience.current ? (
@@ -42,7 +42,7 @@ export function ExperienceCard({ experience, isLast = false }: ExperienceCardPro
           {experience.highlights.map((item) => (
             <li key={item} className="flex gap-2">
               <span className="mt-2 size-1.5 shrink-0 rounded-full bg-sky-400" aria-hidden="true" />
-              <span>{item}</span>
+              <span className="min-w-0">{item}</span>
             </li>
           ))}
         </ul>

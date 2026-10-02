@@ -5,12 +5,12 @@ export function Background() {
       <div className="absolute -top-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-sky-500/15 blur-3xl dark:bg-sky-500/10" />
       <div className="absolute top-1/3 -right-24 h-[22rem] w-[22rem] rounded-full bg-violet-500/10 blur-3xl" />
       <div
-        className="absolute inset-0 opacity-[0.22] dark:opacity-[0.14]"
+        className="tech-grid absolute -inset-4 opacity-[0.16] dark:opacity-[0.11]"
         style={{
           backgroundImage:
-            'linear-gradient(to right, color-mix(in srgb, var(--fg) 12%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, var(--fg) 12%, transparent) 1px, transparent 1px)',
-          backgroundSize: '72px 72px',
-          maskImage: 'radial-gradient(ellipse at center, black 35%, transparent 80%)',
+            'radial-gradient(circle, color-mix(in srgb, var(--fg) 28%, transparent) 1px, transparent 1px), linear-gradient(to right, color-mix(in srgb, var(--fg) 10%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, var(--fg) 10%, transparent) 1px, transparent 1px)',
+          backgroundSize: '22px 22px, 88px 88px, 88px 88px',
+          maskImage: 'radial-gradient(ellipse at center, black 28%, transparent 78%)',
         }}
       />
     </div>

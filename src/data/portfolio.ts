@@ -10,40 +10,33 @@ import type {
   TechnologyGroupData,
 } from '../types'
 
-/**
- * =============================================================================
- * VALORES PENDIENTES DE REEMPLAZAR
- * Completá estos campos antes de publicar el sitio.
- * =============================================================================
- */
 export const pendingConfig: PendingConfig = {
   githubUsername: 'AxelMerlino',
-  // TODO: reemplazar por la URL definitiva cuando despliegues en Vercel
-  siteUrl: 'https://TU-DOMINIO.vercel.app',
-  cvPath: '/cv/axel-maximiliano-merlino-cv.pdf',
+  siteUrl: 'https://portfolio-axel-merlino.vercel.app',
+  cvPath: '/cv/Axel-Maximiliano-Merlino-CV.pdf',
   showCvDownload: true,
-  // TODO: ajustar según tu situación actual
-  availability:
-    'Abierto a oportunidades como Desarrollador .NET Junior, Backend Junior o Full Stack Junior.',
+  availability: 'Abierto a oportunidades como Desarrollador .NET Junior o Backend Developer.',
 }
 
 export const profile = {
   fullName: 'Axel Maximiliano Merlino',
   shortName: 'Axel Merlino',
   initials: 'AM',
-  title: 'Desarrollador .NET Jr. | Estudiante de Ingeniería en Sistemas',
+  title: 'Desarrollador .NET Junior / Backend Developer',
   location: 'Avellaneda, Buenos Aires, Argentina',
   email: 'AxelMerlino@gmail.com',
+  phone: '+54 9 11 3085-6312',
+  phoneHref: 'tel:+5491130856312',
   heroSummary:
-    'Desarrollador de software especializado en tecnologías .NET, APIs y bases de datos. Actualmente estudio Ingeniería en Sistemas y cuento con experiencia en el desarrollo y mantenimiento de soluciones utilizadas en entornos reales.',
+    'Desarrollador .NET con experiencia en desarrollo y mantenimiento de backend, APIs y bases de datos PostgreSQL. Trabajo en integraciones de servicios para gestión de seguros y en aplicaciones móviles con React Native y Expo. Curso el 5.º año de Ingeniería en Sistemas Informáticos en la Universidad Abierta Interamericana.',
   about: [
-    'Soy estudiante avanzado de Ingeniería en Sistemas en la Universidad Abierta Interamericana y desarrollador de software con experiencia laboral en aplicaciones web, APIs, autenticación, bases de datos y sistemas empresariales.',
-    'Trabajo principalmente con C#, .NET Framework, .NET, PostgreSQL y tecnologías frontend. Me interesa crear soluciones mantenibles, resolver problemas reales y continuar desarrollándome profesionalmente en backend y arquitectura de software.',
-    'También cuento con conocimientos de Linux, administración de sistemas, OpenShift, contenedores y fundamentos de infraestructura adquiridos mediante capacitaciones de Red Hat.',
+    'Desarrollo y mantengo backend, APIs y bases de datos PostgreSQL. En la pasantía trabajo con integraciones de servicios para gestión de seguros y con aplicaciones móviles en React Native y Expo.',
+    'En America Virtual S.A. mantengo el backend y las APIs de OurClub, desarrollo la integración de Gestión Seguros entre Equis y Pax, y automatizo pruebas del módulo CCOO de GDEBA.',
+    'En proyectos personales uso React, TypeScript y Vite. También armé un generador local de currículums en Python.',
   ],
-  seoTitle: 'Axel Merlino | Desarrollador .NET',
+  seoTitle: 'Axel Merlino | Desarrollador .NET Junior',
   seoDescription:
-    'Portfolio de Axel Maximiliano Merlino, desarrollador .NET Jr. y estudiante de Ingeniería en Sistemas. Experiencia en C#, APIs REST, PostgreSQL y aplicaciones web.',
+    'Portfolio de Axel Maximiliano Merlino, desarrollador .NET Junior. Backend, APIs, PostgreSQL, NestJS y aplicaciones móviles con React Native.',
 }
 
 export const githubUrl = `https://github.com/${pendingConfig.githubUsername}`
@@ -57,7 +50,7 @@ export const navigation: NavItem[] = [
   { id: 'tecnologias', label: 'Tecnologías', href: '#tecnologias' },
   { id: 'proyectos', label: 'Proyectos', href: '#proyectos' },
   { id: 'educacion', label: 'Educación', href: '#educacion' },
-  { id: 'certificaciones', label: 'Certificaciones', href: '#certificaciones' },
+  { id: 'cursos', label: 'Cursos', href: '#cursos' },
   { id: 'contacto', label: 'Contacto', href: '#contacto' },
 ]
 
@@ -85,37 +78,27 @@ export const socialLinks: SocialLink[] = [
 export const experiences: Experience[] = [
   {
     id: 'america-virtual',
-    company: 'América Virtual S.A.',
-    role: 'Desarrollador de Software / Pasante de Desarrollo',
-    period: 'Junio de 2025 — Actualidad',
+    company: 'America Virtual S.A.',
+    role: 'Desarrollador (Pasantía)',
+    period: 'Julio de 2025 — Actualidad',
     current: true,
-    summary:
-      'Participación en el desarrollo y mantenimiento de soluciones web y APIs para plataformas de gestión. Trabajo con aplicaciones existentes, integración entre servicios, autenticación, bases de datos y resolución de incidencias.',
+    summary: 'IT y Proyectos.',
     highlights: [
-      'Desarrollo y mantenimiento de aplicaciones con C#, .NET Framework 4.8.1 y .NET 6.',
-      'Desarrollo y consumo de APIs REST.',
-      'Acceso a datos mediante Entity Framework, Dapper y PostgreSQL.',
-      'Implementación y mantenimiento de mecanismos de autenticación con JWT, OAuth 2.0 y Google OAuth.',
-      'Participación en soluciones web desarrolladas con MVC, AngularJS y JavaScript.',
-      'Colaboración en aplicaciones móviles desarrolladas con React Native y Expo.',
-      'Uso de Docker, WSL2 e IIS en entornos de desarrollo y despliegue.',
-      'Análisis y resolución de errores en sistemas existentes.',
-      'Testing funcional y documentación técnica.',
-      'Trabajo con sistemas multiempresa y arquitecturas compuestas por distintos servicios.',
+      'Desarrollo y mantengo el backend y las APIs de OurClub con C#, .NET y PostgreSQL, con correcciones e integraciones entre componentes.',
+      'Desarrollo la integración de APIs de Gestión Seguros entre Equis y Pax con NestJS, Prisma y PostgreSQL, para autenticación, manejo de tokens y la vinculación de tomadores con usuarios y contratos.',
+      'Desarrollo aplicaciones de OurClub para iOS y Android con React Native y Expo.',
+      'Realizo pruebas funcionales del módulo CCOO de GDEBA y automatizo esas pruebas con C#, .NET y Playwright.',
     ],
   },
   {
     id: 'giver-solutions',
     company: 'Giver Solutions',
-    role: 'Analista de Datos y Marketing Digital / Outbound Specialist',
-    period: 'Septiembre de 2023 — Diciembre de 2023',
+    role: 'Outbound Specialist',
+    period: 'Julio de 2023 — Diciembre de 2023',
     highlights: [
-      'Creación, organización, limpieza y actualización de bases de datos de clientes potenciales.',
-      'Búsqueda y calificación de oportunidades comerciales.',
-      'Utilización de LinkedIn y plataformas de prospección.',
-      'Implementación de campañas de email marketing.',
-      'Automatización de tareas y procesos comerciales.',
-      'Análisis de resultados para optimizar campañas digitales.',
+      'Organicé y depuré bases de prospectos en Excel, de entre 200 y 500 registros.',
+      'Busqué y califiqué prospectos con LinkedIn Sales Navigator y otras plataformas.',
+      'Lancé campañas de email marketing e implementé sales engagement con Instantly.',
     ],
   },
 ]
@@ -124,114 +107,106 @@ export const technologyGroups: TechnologyGroupData[] = [
   {
     id: 'backend',
     title: 'Backend',
-    description: 'Servicios, APIs y aplicaciones del lado del servidor.',
+    description: 'Servicios y APIs que uso en el trabajo.',
     items: [
       { name: 'C#' },
-      { name: '.NET' },
-      { name: 'ASP.NET' },
-      { name: '.NET Framework' },
+      { name: '.NET Framework 4.8.1' },
+      { name: '.NET 6' },
       { name: 'ASP.NET MVC' },
-      { name: 'Web API' },
-      { name: 'API REST' },
-      { name: 'Entity Framework' },
-      { name: 'Dapper' },
+      { name: 'ASP.NET Web API' },
+      { name: 'ASP.NET Core' },
       { name: 'NestJS' },
     ],
   },
   {
-    id: 'frontend',
-    title: 'Frontend y móvil',
-    description: 'Interfaces web y aplicaciones móviles.',
-    items: [
-      { name: 'HTML5' },
-      { name: 'CSS3' },
-      { name: 'JavaScript' },
-      { name: 'TypeScript' },
-      { name: 'AngularJS' },
-      { name: 'React' },
-      { name: 'React Native' },
-      { name: 'Expo' },
-    ],
+    id: 'mobile',
+    title: 'Móvil',
+    description: 'Aplicaciones de OurClub para iOS y Android.',
+    items: [{ name: 'React Native' }, { name: 'Expo' }],
   },
   {
-    id: 'databases',
-    title: 'Bases de datos',
-    description: 'Modelado, consultas y persistencia.',
+    id: 'data',
+    title: 'Datos',
+    description: 'Consultas, persistencia y ORM.',
     items: [
-      { name: 'PostgreSQL' },
-      { name: 'SQL Server' },
-      { name: 'MySQL' },
       { name: 'SQL' },
-      { name: 'Bases de datos relacionales' },
-      { name: 'NoSQL' },
+      { name: 'PostgreSQL' },
+      { name: 'Entity Framework' },
+      { name: 'Dapper' },
+      { name: 'Prisma' },
     ],
   },
   {
-    id: 'auth',
-    title: 'Autenticación e integración',
-    description: 'Identidad, tokens e intercambio de datos.',
+    id: 'web',
+    title: 'Web',
+    description: 'Sitios y proyectos personales.',
     items: [
-      { name: 'JWT' },
-      { name: 'OAuth 2.0' },
-      { name: 'Google OAuth' },
-      { name: 'JSON' },
-      { name: 'XML' },
-      { name: 'Web Services' },
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'Vite' },
+      { name: 'HTML' },
+      { name: 'CSS' },
+      { name: 'JavaScript' },
     ],
   },
   {
-    id: 'infra',
-    title: 'Herramientas e infraestructura',
-    description: 'Control de versiones, entornos y despliegue.',
-    items: [
-      { name: 'Git' },
-      { name: 'GitHub' },
-      { name: 'Docker' },
-      { name: 'WSL2' },
-      { name: 'IIS' },
-      { name: 'Linux' },
-      { name: 'Windows' },
-      { name: 'OpenShift' },
-      { name: 'Postman' },
-    ],
+    id: 'quality',
+    title: 'Pruebas y versiones',
+    description: 'Verificación y control de versiones.',
+    items: [{ name: 'Pruebas funcionales' }, { name: 'Playwright' }, { name: 'Git' }],
   },
 ]
 
 export const projects: Project[] = [
   {
-    id: 'gestion-web',
-    title: 'Sistema de gestión web',
+    id: 'creador-de-cv',
+    title: 'Creador de CV',
     description:
-      'Participación en el desarrollo y mantenimiento de una plataforma de gestión empresarial compuesta por aplicaciones web y APIs.',
-    technologies: [
-      'C#',
-      '.NET Framework',
-      'ASP.NET MVC',
-      'Web API',
-      'PostgreSQL',
-      'Entity Framework',
-      'Dapper',
-      'JavaScript',
-    ],
-    type: 'professional',
-    status: 'Experiencia profesional',
-  },
-  {
-    id: 'auth-api',
-    title: 'API de autenticación e integración',
-    description:
-      'Implementación y mantenimiento de servicios de autenticación y comunicación entre aplicaciones mediante tokens y estándares de autorización.',
-    technologies: ['.NET', 'JWT', 'OAuth 2.0', 'Google OAuth', 'API REST', 'PostgreSQL'],
-    type: 'professional',
-    status: 'Experiencia profesional',
-  },
-  {
-    id: 'proximo-proyecto',
-    title: 'Próximo proyecto',
-    description: 'Actualmente estoy preparando un nuevo proyecto para incorporar a mi portfolio.',
-    technologies: [],
+      'Generador local en Python y python-docx que arma un currículum en DOCX desde un JSON y exporta el PDF.',
+    technologies: ['Python', 'python-docx'],
     type: 'personal',
-    status: 'En desarrollo',
+    repoUrl: 'https://github.com/AxelMerlino/creador-de-cv',
+  },
+  {
+    id: 'portfolio',
+    title: 'Portfolio',
+    description: 'Sitio personal de una página para presentar experiencia, proyectos y el currículum descargable.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    type: 'personal',
+    repoUrl: 'https://github.com/AxelMerlino/portfolio-axel-merlino',
+    demoUrl: 'https://portfolio-axel-merlino.vercel.app',
+  },
+  {
+    id: 'calculadora-mercadolibre',
+    title: 'Calculadora de costos de MercadoLibre',
+    description:
+      'Calcula precios de publicación en MercadoLibre a partir del ingreso neto objetivo, costos de envío, comisiones e impuestos.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    type: 'personal',
+    repoUrl: 'https://github.com/AxelMerlino/calculadora-mercadolibre',
+    demoUrl: 'https://calculadora-mercadolibre-virid.vercel.app/',
+  },
+  {
+    id: 'la-aceituna-negra',
+    title: 'La Aceituna Negra',
+    description:
+      'Sitio de práctica para una pizzería de Gerli. Presenta la carta, el local y el pedido por WhatsApp. No es un empleo.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    type: 'practice',
+    status: 'Práctica para terceros',
+    repoUrl: 'https://github.com/AxelMerlino/La-Aceituna-Negra',
+    demoUrl: 'https://la-aceituna-negra.vercel.app/',
+  },
+  {
+    id: 'click-and-go',
+    title: 'Click and Go',
+    description:
+      'Sitio de práctica para un local de mochilas, joyeros y carteras en Temperley. Incluye productos, venta minorista y mayorista, envíos y contacto. No es un empleo.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    type: 'practice',
+    status: 'Práctica para terceros',
+    repoUrl: 'https://github.com/AxelMerlino/click-go-web-launch',
+    demoUrl: 'https://click-go-web-launch.vercel.app/',
   },
 ]
 
@@ -240,52 +215,51 @@ export const education: EducationItem[] = [
     id: 'ingenieria',
     title: 'Ingeniería en Sistemas Informáticos',
     institution: 'Universidad Abierta Interamericana',
-    period: 'Abril de 2021 — Actualidad',
-    status: 'Estudiante avanzado — cursando quinto año',
-    areas: [
-      'Programación orientada a objetos',
-      'Bases de datos',
-      'Ingeniería de software',
-      'Arquitectura de sistemas',
-      'Sistemas operativos',
-      'Algoritmos y estructuras de datos',
-      'Análisis y diseño de sistemas',
-      'Desarrollo de software',
-    ],
+    period: '2021 — Actualidad',
+    status: 'Cursando 5.º año',
   },
   {
     id: 'tecnico',
     title: 'Técnico en Diseño y Producción Gráfica',
     institution: 'Escuela Técnica N.º 15 “Maipú”',
-    period: '2015 — 2020',
-    description:
-      'Formación técnica en diseño, producción gráfica y utilización de herramientas digitales.',
+    period: 'Febrero de 2015 — Diciembre de 2020',
+  },
+  {
+    id: 'ingles',
+    title: 'Inglés, nivel 02',
+    institution: 'Centro Universitario de Idiomas',
   },
 ]
 
 export const certifications: Certification[] = [
   {
+    id: 'rh104',
+    name: 'Getting Started with Linux Fundamentals',
+    issuer: 'Red Hat',
+    code: 'RH104',
+    date: 'Septiembre de 2026',
+    kind: 'Certificado de asistencia',
+    credentialUrl: 'https://www.credly.com/badges/afe080de-aaa9-425c-9388-5c0d040f9e5d/public_url',
+    showPdfDownload: false,
+  },
+  {
     id: 'rh124',
     name: 'Red Hat System Administration I',
     issuer: 'Red Hat',
     code: 'RH124',
-    version: '10.0',
-    date: '11 de septiembre de 2026',
-    hours: 40,
-    credentialUrl: 'https://www.credly.com/badges/0368355d-286c-484c-ae19-981f0cb0705b',
-    pdfPath: '/certificates/red-hat-rh124-axel-merlino.pdf',
+    date: 'Septiembre de 2026',
+    kind: 'Certificado de asistencia',
+    credentialUrl: 'https://www.credly.com/badges/0368355d-286c-484c-ae19-981f0cb0705b/public_url',
     showPdfDownload: false,
   },
   {
-    id: 'rh104',
-    name: 'Red Hat Training: Getting Started with Linux Fundamentals',
+    id: 'do180',
+    name: 'Red Hat OpenShift Administration I',
     issuer: 'Red Hat',
-    code: 'RH104',
-    version: '9.1',
-    date: '1 de septiembre de 2026',
-    hours: 16,
-    credentialUrl: 'https://www.credly.com/badges/afe080de-aaa9-425c-9388-5c0d040f9e5d',
-    pdfPath: '/certificates/red-hat-rh104-axel-merlino.pdf',
+    code: 'DO180',
+    date: 'Septiembre de 2026',
+    kind: 'Certificado de asistencia',
+    credentialUrl: 'https://www.credly.com/badges/b112a745-e58e-498e-90da-faa3a4023cc0/public_url',
     showPdfDownload: false,
   },
 ]
@@ -293,12 +267,12 @@ export const certifications: Certification[] = [
 export const languages: Language[] = [
   { name: 'Español', level: 'Nativo' },
   { name: 'Inglés', level: 'Intermedio' },
-  { name: 'Portugués', level: 'Básico' },
 ]
 
 export const projectTypeLabels: Record<Project['type'], string> = {
   professional: 'Profesional',
   personal: 'Personal',
+  practice: 'Práctica',
   academic: 'Académico',
 }
 
@@ -308,6 +282,7 @@ export const personJsonLd = {
   name: profile.fullName,
   jobTitle: profile.title,
   email: `mailto:${profile.email}`,
+  telephone: profile.phoneHref.replace('tel:', ''),
   url: pendingConfig.siteUrl,
   address: {
     '@type': 'PostalAddress',
@@ -315,14 +290,15 @@ export const personJsonLd = {
     addressRegion: 'Buenos Aires',
     addressCountry: 'AR',
   },
-  sameAs: [linkedinUrl, githubUrl],
+  sameAs: [linkedinUrl, githubUrl, pendingConfig.siteUrl],
   knowsAbout: [
     'C#',
     '.NET',
     'ASP.NET',
-    'API REST',
+    'NestJS',
     'PostgreSQL',
-    'Entity Framework',
+    'Prisma',
+    'React Native',
     'Desarrollo backend',
   ],
 }

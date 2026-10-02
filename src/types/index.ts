@@ -1,4 +1,4 @@
-export type ProjectType = 'personal' | 'academic' | 'professional'
+export type ProjectType = 'personal' | 'practice' | 'academic' | 'professional'
 export type SocialIcon = 'github' | 'linkedin' | 'email'
 export type Theme = 'dark' | 'light'
 
@@ -53,7 +53,7 @@ export interface EducationItem {
   id: string
   title: string
   institution: string
-  period: string
+  period?: string
   status?: string
   description?: string
   areas?: string[]
@@ -64,10 +64,11 @@ export interface Certification {
   name: string
   issuer: string
   code: string
-  version: string
   date: string
-  hours: number
-  credentialUrl: string
+  kind: string
+  version?: string
+  hours?: number
+  credentialUrl?: string
   pdfPath?: string
   showPdfDownload: boolean
 }

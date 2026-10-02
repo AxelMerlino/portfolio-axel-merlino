@@ -49,7 +49,7 @@ export function Navbar() {
           : 'border-transparent bg-transparent',
       )}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 min-w-0 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <a href="#inicio" className="flex items-center gap-3 rounded-md">
           <span className="grid size-9 place-items-center rounded-lg bg-linear-to-br from-sky-500 to-violet-500 font-mono text-xs font-bold text-white">
             {profile.initials}
@@ -75,7 +75,7 @@ export function Navbar() {
             <a
               href={pendingConfig.cvPath}
               className="hidden rounded-full border border-[var(--line)] px-3 py-2 text-sm font-medium hover:border-sky-400/60 sm:inline-flex"
-              download
+              download="Axel-Maximiliano-Merlino-CV.pdf"
             >
               Descargar CV
             </a>
@@ -114,6 +114,16 @@ export function Navbar() {
               {item.label}
             </a>
           ))}
+          {pendingConfig.showCvDownload ? (
+            <a
+              href={pendingConfig.cvPath}
+              className="mt-2 inline-flex rounded-full border border-[var(--line)] px-3 py-3 text-base font-medium"
+              download="Axel-Maximiliano-Merlino-CV.pdf"
+              onClick={() => setOpen(false)}
+            >
+              Descargar CV
+            </a>
+          ) : null}
         </nav>
       </div>
     </header>

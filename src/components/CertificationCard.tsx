@@ -21,31 +21,42 @@ export function CertificationCard({ certification }: CertificationCardProps) {
       <p className="mt-1 text-sm text-sky-700 dark:text-sky-300">{certification.issuer}</p>
 
       <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
-        <div>
-          <dt className="text-slate-500 dark:text-slate-400">Versión</dt>
-          <dd>{certification.version}</dd>
+        <div className="col-span-2">
+          <dt className="text-slate-500 dark:text-slate-400">Tipo</dt>
+          <dd>{certification.kind}</dd>
         </div>
-        <div>
-          <dt className="text-slate-500 dark:text-slate-400">Duración</dt>
-          <dd>{certification.hours} horas</dd>
-        </div>
+        {certification.version ? (
+          <div>
+            <dt className="text-slate-500 dark:text-slate-400">Versión</dt>
+            <dd>{certification.version}</dd>
+          </div>
+        ) : null}
+        {certification.hours ? (
+          <div>
+            <dt className="text-slate-500 dark:text-slate-400">Duración</dt>
+            <dd>{certification.hours} horas</dd>
+          </div>
+        ) : null}
         <div className="col-span-2">
           <dt className="text-slate-500 dark:text-slate-400">Fecha</dt>
           <dd>{certification.date}</dd>
         </div>
       </dl>
 
+      {certification.credentialUrl || (certification.showPdfDownload && certification.pdfPath) ? (
       <div className="mt-6 flex flex-wrap gap-3">
-        <a
-          href={certification.credentialUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-sky-400"
-          aria-label={`Ver credencial de ${certification.name} (se abre en una pestaña nueva)`}
-        >
-          <ExternalLink className="size-4" aria-hidden="true" />
-          Ver credencial
-        </a>
+        {certification.credentialUrl ? (
+          <a
+            href={certification.credentialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-sky-400"
+            aria-label={`Ver credencial de ${certification.name} (se abre en una pestaña nueva)`}
+          >
+            <ExternalLink className="size-4" aria-hidden="true" />
+            Ver credencial
+          </a>
+        ) : null}
         {certification.showPdfDownload && certification.pdfPath ? (
           <a
             href={certification.pdfPath}
@@ -58,6 +69,7 @@ export function CertificationCard({ certification }: CertificationCardProps) {
           </a>
         ) : null}
       </div>
+      ) : null}
     </article>
   )
 }

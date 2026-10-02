@@ -15,7 +15,7 @@ export function SectionTitle({ kicker, title, description, className }: SectionT
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">{description}</p>
+        <p className="mt-4 text-base leading-relaxed text-balance text-slate-600 dark:text-slate-400">{description}</p>
       ) : null}
     </div>
   )
