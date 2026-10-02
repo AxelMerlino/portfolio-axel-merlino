@@ -8,7 +8,7 @@ export function Education() {
     <section id="educacion" className="section-shell">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <SectionTitle kicker="05 — Formación" title="Educación" />
+          <SectionTitle kicker="04 — Formación" title="Educación" />
         </Reveal>
         <div className="grid gap-6 lg:grid-cols-2">
           {education.map((item, index) => (

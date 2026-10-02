@@ -9,9 +9,9 @@ export function Projects() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionTitle
-            kicker="04 — Trabajo"
+            kicker="06 — Trabajo"
             title="Proyectos"
-            description="Proyectos personales y sitios hechos como práctica para terceros. La pasantía está en Experiencia."
+            description="Proyectos personales y sitios hechos como práctica para terceros. El trabajo en America Virtual está en Experiencia."
           />
         </Reveal>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

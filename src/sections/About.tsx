@@ -10,7 +10,7 @@ export function About() {
           <SectionTitle
             kicker="01 — Perfil"
             title="Sobre mí"
-            description="Desarrollador .NET Junior, con pasantía en backend y APIs, y estudiante de 5.º año de Ingeniería en Sistemas."
+            description="Desarrollador .NET en backend y APIs, y estudiante de 5.º año de Ingeniería en Sistemas."
           />
         </Reveal>
 

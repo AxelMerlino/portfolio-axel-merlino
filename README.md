@@ -1,6 +1,6 @@
 # Portfolio — Axel Maximiliano Merlino
 
-Portfolio profesional de **Axel Maximiliano Merlino**, desarrollador .NET Junior y estudiante de Ingeniería en Sistemas. El sitio está pensado para búsquedas laborales de desarrollador .NET Junior, backend y pasantías IT.
+Portfolio profesional de **Axel Maximiliano Merlino**, desarrollador .NET y estudiante de Ingeniería en Sistemas. El sitio está pensado para búsquedas laborales de desarrollador .NET y backend.
 
 Es una aplicación de una sola página, con navegación por secciones, tema oscuro como predeterminado y un tema claro coherente.
 

@@ -44,7 +44,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <img
           src={project.image}
           alt={project.imageAlt ?? `Captura del proyecto ${project.title}`}
-          className="h-44 w-full object-cover"
+          className="h-44 w-full object-cover object-top"
           loading="lazy"
         />
       ) : (

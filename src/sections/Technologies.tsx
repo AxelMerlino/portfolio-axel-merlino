@@ -11,7 +11,7 @@ export function Technologies() {
           <SectionTitle
             kicker="03 — Stack"
             title="Tecnologías"
-            description="Tecnologías que uso en la pasantía y en proyectos personales."
+            description="Tecnologías que uso en el trabajo y en proyectos personales."
           />
         </Reveal>
         <div className="grid gap-5 md:grid-cols-2">

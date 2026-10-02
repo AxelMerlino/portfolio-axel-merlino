@@ -9,7 +9,7 @@ export function Certifications() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionTitle
-            kicker="06 — Cursos"
+            kicker="05 — Cursos"
             title="Cursos"
             description="Certificados de asistencia de Red Hat. La insignia se abre en Credly y no corresponde a una certificación obtenida por examen."
           />

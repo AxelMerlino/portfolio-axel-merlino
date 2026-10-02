@@ -15,14 +15,14 @@ export const pendingConfig: PendingConfig = {
   siteUrl: 'https://portfolio-axel-merlino.vercel.app',
   cvPath: '/cv/Axel-Maximiliano-Merlino-CV.pdf',
   showCvDownload: true,
-  availability: 'Abierto a oportunidades como Desarrollador .NET Junior o Backend Developer.',
+  availability: 'Abierto a oportunidades como Desarrollador .NET o Backend Developer.',
 }
 
 export const profile = {
   fullName: 'Axel Maximiliano Merlino',
   shortName: 'Axel Merlino',
   initials: 'AM',
-  title: 'Desarrollador .NET Junior / Backend Developer',
+  title: 'Desarrollador .NET / Backend Developer',
   location: 'Avellaneda, Buenos Aires, Argentina',
   email: 'AxelMerlino@gmail.com',
   phone: '+54 9 11 3085-6312',
@@ -30,13 +30,13 @@ export const profile = {
   heroSummary:
     'Desarrollador .NET con experiencia en desarrollo y mantenimiento de backend, APIs y bases de datos PostgreSQL. Trabajo en integraciones de servicios para gestión de seguros y en aplicaciones móviles con React Native y Expo. Curso el 5.º año de Ingeniería en Sistemas Informáticos en la Universidad Abierta Interamericana.',
   about: [
-    'Desarrollo y mantengo backend, APIs y bases de datos PostgreSQL. En la pasantía trabajo con integraciones de servicios para gestión de seguros y con aplicaciones móviles en React Native y Expo.',
+    'Desarrollo y mantengo backend, APIs y bases de datos PostgreSQL. Trabajo con integraciones de servicios para gestión de seguros y con aplicaciones móviles en React Native y Expo.',
     'En America Virtual S.A. mantengo el backend y las APIs de OurClub, desarrollo la integración de Gestión Seguros entre Equis y Pax, y automatizo pruebas del módulo CCOO de GDEBA.',
-    'En proyectos personales uso React, TypeScript y Vite. También armé un generador local de currículums en Python.',
+    'En proyectos personales uso React, TypeScript y Vite.',
   ],
-  seoTitle: 'Axel Merlino | Desarrollador .NET Junior',
+  seoTitle: 'Axel Merlino | Desarrollador .NET',
   seoDescription:
-    'Portfolio de Axel Maximiliano Merlino, desarrollador .NET Junior. Backend, APIs, PostgreSQL, NestJS y aplicaciones móviles con React Native.',
+    'Portfolio de Axel Maximiliano Merlino, desarrollador .NET. Backend, APIs, PostgreSQL, NestJS y aplicaciones móviles con React Native.',
 }
 
 export const githubUrl = `https://github.com/${pendingConfig.githubUsername}`
@@ -48,9 +48,9 @@ export const navigation: NavItem[] = [
   { id: 'sobre-mi', label: 'Sobre mí', href: '#sobre-mi' },
   { id: 'experiencia', label: 'Experiencia', href: '#experiencia' },
   { id: 'tecnologias', label: 'Tecnologías', href: '#tecnologias' },
-  { id: 'proyectos', label: 'Proyectos', href: '#proyectos' },
   { id: 'educacion', label: 'Educación', href: '#educacion' },
   { id: 'cursos', label: 'Cursos', href: '#cursos' },
+  { id: 'proyectos', label: 'Proyectos', href: '#proyectos' },
   { id: 'contacto', label: 'Contacto', href: '#contacto' },
 ]
 
@@ -79,7 +79,7 @@ export const experiences: Experience[] = [
   {
     id: 'america-virtual',
     company: 'America Virtual S.A.',
-    role: 'Desarrollador (Pasantía)',
+    role: 'Desarrollador',
     period: 'Julio de 2025 — Actualidad',
     current: true,
     summary: 'IT y Proyectos.',
@@ -159,30 +159,14 @@ export const technologyGroups: TechnologyGroupData[] = [
 
 export const projects: Project[] = [
   {
-    id: 'creador-de-cv',
-    title: 'Creador de CV',
-    description:
-      'Generador local en Python y python-docx que arma un currículum en DOCX desde un JSON y exporta el PDF.',
-    technologies: ['Python', 'python-docx'],
-    type: 'personal',
-    repoUrl: 'https://github.com/AxelMerlino/creador-de-cv',
-  },
-  {
-    id: 'portfolio',
-    title: 'Portfolio',
-    description: 'Sitio personal de una página para presentar experiencia, proyectos y el currículum descargable.',
-    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-    type: 'personal',
-    repoUrl: 'https://github.com/AxelMerlino/portfolio-axel-merlino',
-    demoUrl: 'https://portfolio-axel-merlino.vercel.app',
-  },
-  {
     id: 'calculadora-mercadolibre',
     title: 'Calculadora de costos de MercadoLibre',
     description:
       'Calcula precios de publicación en MercadoLibre a partir del ingreso neto objetivo, costos de envío, comisiones e impuestos.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     type: 'personal',
+    image: '/projects/calculadora-mercadolibre.png',
+    imageAlt: 'Captura de la calculadora de precios para MercadoLibre',
     repoUrl: 'https://github.com/AxelMerlino/calculadora-mercadolibre',
     demoUrl: 'https://calculadora-mercadolibre-virid.vercel.app/',
   },
@@ -194,6 +178,8 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
     type: 'practice',
     status: 'Práctica para terceros',
+    image: '/projects/la-aceituna-negra.jpg',
+    imageAlt: 'Captura del sitio de La Aceituna Negra',
     repoUrl: 'https://github.com/AxelMerlino/La-Aceituna-Negra',
     demoUrl: 'https://la-aceituna-negra.vercel.app/',
   },
@@ -205,6 +191,8 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
     type: 'practice',
     status: 'Práctica para terceros',
+    image: '/projects/click-and-go.jpg',
+    imageAlt: 'Captura del sitio de Click and Go',
     repoUrl: 'https://github.com/AxelMerlino/click-go-web-launch',
     demoUrl: 'https://click-go-web-launch.vercel.app/',
   },

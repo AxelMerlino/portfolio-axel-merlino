@@ -11,7 +11,7 @@ export function Experience() {
           <SectionTitle
             kicker="02 — Trayectoria"
             title="Experiencia laboral"
-            description="Pasantía de desarrollo en backend, APIs y aplicaciones móviles, y una experiencia anterior en prospección comercial."
+            description="Desarrollo de backend, APIs y aplicaciones móviles, y una experiencia anterior en prospección comercial."
           />
         </Reveal>
         <ol className="space-y-8">
